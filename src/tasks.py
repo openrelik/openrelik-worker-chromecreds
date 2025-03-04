@@ -62,7 +62,7 @@ def command(
             display_name=f"{input_file.get('display_name')}-chromecreds.dict",
             data_type=f"worker:openrelik:chromecreds:report",
         )
-        creds = extract_chrome_creds(input_file.get("path"))
+        creds = _extract_chrome_creds(input_file.get("path"))
         extracted_creds.update(creds)
 
         if creds:
@@ -74,7 +74,7 @@ def command(
     for key in extracted_creds:
       extracted_creds[key] = list(set(extracted_creds[key]))
 
-    task_report = [report(extracted_creds).to_dict()]
+    task_report = [generate_report(extracted_creds).to_dict()]
 
     return create_task_result(
         output_files=output_files,
@@ -82,7 +82,7 @@ def command(
         file_reports=task_report,
     )
 
-def report(creds):
+def generate_report(creds):
     report = Report("Chrome Config Analyzer")
     summary_section = report.add_section()
     details_section = report.add_section()
@@ -101,7 +101,7 @@ def report(creds):
     summary_section.add_paragraph(report.summary)
     return report
 
-def extract_chrome_creds(filepath):
+def _extract_chrome_creds(filepath):
     """Extract saved credentials from a Chrome Login Database file.
 
     Args:
