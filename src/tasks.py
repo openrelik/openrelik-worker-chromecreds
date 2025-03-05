@@ -79,7 +79,7 @@ def command(
     return create_task_result(
         output_files=output_files,
         workflow_id=workflow_id,
-        file_reports=task_report,
+        task_report=task_report,
     )
 
 def generate_report(creds):
