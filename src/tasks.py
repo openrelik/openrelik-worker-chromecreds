@@ -25,7 +25,7 @@ TASK_NAME = "openrelik-worker-chromecreds.tasks.analyse"
 
 # Task metadata for registration in the core system.
 TASK_METADATA = {
-    "display_name": "Chrome Credentials Widget",
+    "display_name": "Chrome Credentials Analyser",
     "description": "Extracts and analyses Chrome Browser Credential store",
 }
 

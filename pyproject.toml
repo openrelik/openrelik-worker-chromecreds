@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "openrelik-worker-template"
-version = "2024.11.27"
-description = "Description of the worker"
-authors = ["YOUR NAME <email@example.com>"]
+name = "openrelik-worker-chromecreds"
+version = "2025.03.03"
+description = "Extracts and analyses stored Chrome credentials"
+authors = ["Fry <fryx0r@gmail.com>"]
 readme = "README.md"
 package-mode = false
 

@@ -1,1 +1,1 @@
-# Openrelik worker template
+# Openrelik ChromeCreds analysis worker
